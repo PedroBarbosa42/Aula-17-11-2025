@@ -15,5 +15,15 @@ public class Main {
         System.out.println(pag1.obterNivelPrioridade());
 
         pag1.processar();
+
+        PagamentoBoleto pag3 = new PagamentoBoleto(300, "Exemplo de Pagamento");
+
+        pag3.exibirDetalhesPagamento();
+
+        Pagamento pagamentos[] = {pag1, pag3};
+
+        for(Pagamento p : pagamentos) {
+            System.out.println(p.getIdTransacao());
+        }
     }
 }

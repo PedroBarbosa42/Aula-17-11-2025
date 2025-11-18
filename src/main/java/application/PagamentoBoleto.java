@@ -18,6 +18,7 @@ public class PagamentoBoleto extends Pagamento implements Rastreavel{
 
     public  PagamentoBoleto(double valor, String descricao) {
         super(valor, descricao);
+        this.codigoRastreamento = "BLT-" + this.getIdTransacao();
 
     }
 
