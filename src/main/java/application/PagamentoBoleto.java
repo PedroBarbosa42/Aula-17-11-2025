@@ -1,0 +1,34 @@
+package application;
+
+public class PagamentoBoleto extends Pagamento implements Rastreavel{
+    private String codigoRastreamento;
+
+    @Override
+    public boolean autenticar() {
+        System.out.println("Autenticando Boleto para transação " + this.getIdTransacao());
+        return true;
+    }
+    
+
+    @Override
+    public boolean validarDados() {
+        System.out.println("Validando dados do Boleto para transação " + this.getIdTransacao());
+        return true;
+    }
+
+    public  PagamentoBoleto(double valor, String descricao) {
+        super(valor, descricao);
+
+    }
+
+    @Override
+    public String obterCodigoRastreamento() {
+        return this.codigoRastreamento;
+
+    }
+
+    @Override
+    public String verificarStatusRastreamento() {
+        return "Boleto ID" + this.codigoRastreamento;
+    }
+}

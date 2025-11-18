@@ -33,7 +33,7 @@ public class PagamentoCartaoCredito extends Pagamento implements Priorizavel, Pr
     
     @Override
     public boolean validarDados() {
-        System.out.println("Valida-ndo dados do cartão para transação " + this.getIdTransacao());
+        System.out.println("Validando dados do cartão para transação " + this.getIdTransacao());
         return true;
     }
 
